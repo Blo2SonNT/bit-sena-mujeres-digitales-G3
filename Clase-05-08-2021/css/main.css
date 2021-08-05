@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    font-family: 'Roboto';
+}
+
+.mx-4 {
+    margin: 0 25%;
+}
+
+.barra-navegacion {
+    background-color: #7d2ae8;
+    width: 100%;
+    height: auto;
+}
+
+.contenedor-nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo-nav {
+    width: 100px;
+}
+
+.contenedor-nav div h4 {
+    color: #ffffff;
+}
+
+#logo-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-titulo h2 {
+    color: #ffffff;
+}
+
+.opt-peluqueria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opt-peluqueria h4 {
+    padding: 0 15px;
+}
+
+.opt-peluqueria a {
+    text-decoration: none;
+}
+
+.sec-welcome {
+    background-image: url(../img/curvas.png);
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec-welcome h1 {
+    font-size: 3.4rem;
+}
+
+.texto-peluqueria {
+    text-align: justify;
+}
