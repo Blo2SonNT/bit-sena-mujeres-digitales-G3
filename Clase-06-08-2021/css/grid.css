@@ -1,0 +1,21 @@
+.contenido div {
+    background: #74db14;
+    padding: 1em;
+    border: 1px solid #fbff00;
+}
+
+.contenido {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.cas1 {
+    grid-column: 1/4;
+    grid-row: 1/3;
+}
+
+.cas6 {
+    grid-column: 2/4;
+}

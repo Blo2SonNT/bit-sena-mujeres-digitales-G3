@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    font-family: 'Roboto';
+}
+
+.mx-4 {
+    margin: 0 25%;
+}
+
+.barra-navegacion {
+    background-color: #7d2ae8;
+    width: 100%;
+    height: auto;
+}
+
+.contenedor-nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo-nav {
+    width: 100px;
+}
+
+.contenedor-nav div h4 {
+    color: #ffffff;
+}
+
+#logo-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-titulo h2 {
+    color: #ffffff;
+}
+
+.opt-peluqueria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opt-peluqueria h4 {
+    padding: 0 15px;
+}
+
+.opt-peluqueria a {
+    text-decoration: none;
+}
+
+.sec-welcome {
+    background-image: url(../img/curvas.png);
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec-welcome h1 {
+    font-size: 3.4rem;
+}
+
+.texto-peluqueria {
+    text-align: justify;
+}
+
+.espacio {
+    margin-top: 25px;
+}
+
+@media (max-width: 700px) {
+    .responsive-section {
+        margin: 0 10% !important;
+        background-color: #7d2ae8;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+    .responsive-section {
+        margin: 0 10% !important;
+        background-color: #3ae82a;
+    }
+}
+
+.texto-peluqueria:hover {
+    color: #15b8b8;
+    background-color: #000;
+}
+
+.texto-peluqueria:active {
+    color: #2ae82a;
+}
+
+.css-link:link {
+    color: #ff0000;
+}
+
+.css-link:visited {
+    color: #f3e40c;
+}
+
+.texto-rojo {
+    color: #e04747;
+}
+
+.lista-compra span:nth-child(3) {
+    background: #0dcce6;
+}
+
+.contenido {
+    background: #96f31c;
+    padding: 35px;
+}
+
+.contenido:empty {
+    background: #ff9100;
+}
