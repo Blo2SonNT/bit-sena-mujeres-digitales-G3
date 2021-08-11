@@ -78,6 +78,9 @@
         margin: 0 10% !important;
         background-color: #7d2ae8;
     }
+    .ejemplo {
+        background-color: #e04747 !important;
+    }
 }
 
 @media (min-width: 701px) and (max-width: 900px) {
@@ -85,6 +88,16 @@
         margin: 0 10% !important;
         background-color: #3ae82a;
     }
+    .ejemplo {
+        background-color: #23a2eb !important;
+    }
+}
+
+.ejemplo {
+    padding: 300px;
+    height: 100px;
+    width: 100%;
+    background-color: #f3e40c;
 }
 
 .texto-peluqueria:hover {
