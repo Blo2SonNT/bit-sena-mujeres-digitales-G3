@@ -72,6 +72,13 @@ Esta funcion pide el nombre del usuario
 comentario
 -------------------------
 
+COMENTAR
+Ctrol + k  ctrl + c 
+
+DESCOMENTAR
+Ctrol + k ctrl + u
+
+
  */
 function pedir_nombre() {
     let nombre = prompt("Cual es tu nombre?")
