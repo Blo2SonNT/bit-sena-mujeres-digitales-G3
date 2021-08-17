@@ -66,7 +66,7 @@ function saludo_usuario(pepito = 1, ubicacion, activo = false, ejemplo) {
     console.log(pepito)
     document.getElementById("saludo").innerHTML += "<br> Hola " + nombre + " como estas?"
 }
-/**
+/*
 Esta funcion pide el nombre del usuario
 -------------------------
 comentario
@@ -77,9 +77,8 @@ Ctrol + k  ctrl + c
 
 DESCOMENTAR
 Ctrol + k ctrl + u
+*/
 
-
- */
 function pedir_nombre() {
     let nombre = prompt("Cual es tu nombre?")
     return nombre
