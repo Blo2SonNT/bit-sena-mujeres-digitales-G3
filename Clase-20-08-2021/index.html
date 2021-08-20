@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="ejercicio_1 display_flex">
+        <button type="button" onclick="suma_numeros()">Sumar Numeros</button><br>
+        <h3 id="resultado_sumatoria"></h3>
+    </section>
+
+    <section class="ejercicio_2 display_flex">
+        <form>
+            <label>Digite el numero</label>
+            <input type="number" id="numero_par_impar" onblur="par_impar()">
+            <span id="par_impar_result"></span>
+        </form>
+    </section>
+
+    <section class="ejercicio_3 display_flex">
+        <form class="disposicion">
+            <label for="">Nombre</label>
+            <input type="text" id="nombre_usuario">
+
+            <label for="">Genero</label>
+            <select id="genero_usuario">
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
+            </select>
+
+            <label for="">Edad</label>
+            <input type="number" min="1" max="110" id="edad_usuario">
+            <button type="button" onclick="validar_premio()" class="boton-form">Validar</button>
+
+            <div class="validacion_usuario" id="validacion_usuario"></div>
+        </form>
+
+    </section>
+
+
+    <section class="ejercicio_6 display_flex">
+        <form>
+            <label for="">Cual es tu nota definitiva?</label>
+            <input type="text" id="nota_estudiante" onblur="promedio_usuario()">
+            <div class="validacion_usuario" id="result_matricula"></div>
+        </form>
+    </section>
+
+    <script src="code.js"></script>
+</body>
+
+</html>

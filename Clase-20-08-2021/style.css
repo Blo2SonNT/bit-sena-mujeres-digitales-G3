@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.display_flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ejercicio_1 {
+    background-color: rgb(147, 240, 135);
+    padding: 3%;
+    margin-bottom: 15px;
+}
+
+.ejercicio_2 {
+    padding: 3%;
+    margin-bottom: 15px;
+    background-color: rgb(250, 144, 223);
+}
+
+.disposicion {
+    display: flex;
+    flex-direction: column;
+}
+
+.ejercicio_3 {
+    background-color: rgb(136, 237, 255);
+    padding: 3%;
+    margin-bottom: 15px;
+}
+
+.boton-form {
+    background-color: rgb(36, 137, 195);
+    color: #fff;
+    margin-top: 15px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.disposicion input,
+.disposicion select {
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.validacion_usuario {
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.ejercicio_6 {
+    background-color: rgb(244, 246, 97);
+    padding: 3%;
+    margin-bottom: 15px;
+}
