@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <nav class="nav">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        Registro
+                    </button>
+                    <a class="nav-link" href="#">Ingreso</a>
+                </nav>
+            </div>
+        </div>
+    </nav>
+
+    <div id="slider-comidas" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#slider-comidas" data-slide-to="0" class="active"></li>
+            <li data-target="#slider-comidas" data-slide-to="1"></li>
+            <li data-target="#slider-comidas" data-slide-to="2"></li>
+            <li data-target="#slider-comidas" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/comida-1.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/comida-2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/comida-3.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/comida-1.webp" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#slider-comidas" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#slider-comidas" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div>
+
+    <div class="container">
+        <div class="slider-p">
+            <img class="p-4" src="img/ejemplo-slider.png" alt="">
+            <img class="p-4" src="img/ejemplo-slider.png" alt="">
+            <img class="p-4" src="img/ejemplo-slider.png" alt="">
+            <img class="p-4" src="img/ejemplo-slider.png" alt="">
+            <img class="p-4" src="img/ejemplo-slider.png" alt="">
+            <img class="p-4" src="img/ejemplo-slider.png" alt="">
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15905.510417543339!2d-74.10892491354122!3d4.704291950406806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9ecf217f4b9d%3A0xeb17cde969504cb2!2sCentro%20Comercial%20Portal%2080!5e0!3m2!1ses-419!2sco!4v1629753594387!5m2!1ses-419!2sco"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+
+
+    <!-- INICIO MODAL DE REGISTRO -->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registrto de usuario</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+                    <form>
+                        <div class="row">
+                            <div class="col-6 mb-4">
+                                <input type="text" class="form-control" placeholder="Nombre">
+                            </div>
+                            <div class="col-6 mb-4">
+                                <input type="text" class="form-control" placeholder="Apellido">
+                            </div>
+                            <div class="col-8 mb-4">
+                                <input type="email" class="form-control" placeholder="Correo">
+                            </div>
+                            <div class="col-4 mb-4">
+                                <input type="number" class="form-control" placeholder="Nro. Documento">
+                            </div>
+                        </div>
+                        <div class="custom-control custom-switch mb-3">
+                            <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                            <label class="custom-control-label" for="customSwitch1">Acepta <a target="_blank" href="https://google.com">terminos y condiciones</a></label>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-md btn-block">Registrarme</button>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIN MODAL DE REGISTRO -->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/config-page.js"></script>
+</body>
+
+</html>
