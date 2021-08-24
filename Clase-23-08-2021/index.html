@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
@@ -54,6 +55,7 @@
         </div>
     </nav>
 
+
     <div id="slider-comidas" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#slider-comidas" data-slide-to="0" class="active"></li>
@@ -87,6 +89,7 @@
     </div>
 
     <div class="container">
+        <h1 class="animate__animated animate__flip animate__delay-2s">Titulo animado :D</h1>
         <div class="slider-p">
             <img class="p-4" src="img/ejemplo-slider.png" alt="">
             <img class="p-4" src="img/ejemplo-slider.png" alt="">
@@ -106,10 +109,10 @@
     <!-- INICIO MODAL DE REGISTRO -->
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Registrto de usuario</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Registro de usuario</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -120,23 +123,23 @@
                     <form>
                         <div class="row">
                             <div class="col-6 mb-4">
-                                <input type="text" class="form-control" placeholder="Nombre">
+                                <input type="text" id="nombre_user" class="form-control" placeholder="Nombre">
                             </div>
                             <div class="col-6 mb-4">
-                                <input type="text" class="form-control" placeholder="Apellido">
+                                <input type="text" id="apellido_user" class="form-control" placeholder="Apellido">
                             </div>
                             <div class="col-8 mb-4">
-                                <input type="email" class="form-control" placeholder="Correo">
+                                <input type="email" id="correo_user" class="form-control" placeholder="Correo">
                             </div>
                             <div class="col-4 mb-4">
-                                <input type="number" class="form-control" placeholder="Nro. Documento">
+                                <input type="number" id="documento_user" class="form-control" placeholder="Nro. Documento">
                             </div>
                         </div>
                         <div class="custom-control custom-switch mb-3">
-                            <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                            <label class="custom-control-label" for="customSwitch1">Acepta <a target="_blank" href="https://google.com">terminos y condiciones</a></label>
+                            <input type="checkbox" class="custom-control-input" id="tyc_user">
+                            <label class="custom-control-label" for="tyc_user">Acepta <a target="_blank" href="https://google.com">terminos y condiciones</a></label>
                         </div>
-                        <button type="button" class="btn btn-primary btn-md btn-block">Registrarme</button>
+                        <button type="button" class="btn btn-primary btn-md btn-block" onclick="registro_user()">Registrarme</button>
                     </form>
 
 
@@ -151,6 +154,8 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/config-page.js"></script>
+    <script src="js/sweetalert.js"></script>
+    <script src="js/funciones.js"></script>
 </body>
 
 </html>
