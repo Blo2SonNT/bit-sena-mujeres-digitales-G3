@@ -1,3 +1,10 @@
 /* .bg-dark {
     background-color: #00ffff !important;
 } */
+
+.cajita_feliz {
+    height: 250px;
+    width: 250px;
+    background-image: url(https://d25dk4h1q4vl9b.cloudfront.net/bundles/front/media/images/favicons/favicon-512.png);
+    background-size: contain;
+}
