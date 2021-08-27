@@ -11,15 +11,28 @@ function registro_user() {
 
     if (nombre == "" || nombre == null || nombre == "undefined") {
         error_validacion("nombre", nombre)
+        return
     }
 
     if (apellido == "" || apellido == null || apellido == "undefined") {
         error_validacion("apellido", apellido)
+        return
     }
 
+    if (!expresion_numeros.test(documento)) {
+        error_validacion("apellido", apellido)
+        return
+    }
+
+    if (!expresion_correo.test(correo)) {
+        error_validacion("apellido", apellido)
+        return
+    }
+
+
     //EVALUACION TERNARIA   --->   condicion ? se cumple : no cumple
-    expresion_numeros.test(documento) ? "" : error_validacion("documento", documento)
-    expresion_correo.test(correo) ? "" : error_validacion("correo", correo)
+    // expresion_numeros.test(documento) ? "" : error_validacion("documento", documento)
+    // expresion_correo.test(correo) ? "" : error_validacion("correo", correo)
 
     localStorage.setItem("nombre", nombre)
     localStorage.setItem("apellido", apellido)
