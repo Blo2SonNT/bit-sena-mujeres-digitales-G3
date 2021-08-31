@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+* {
+    font-family: 'Oswald', sans-serif;
+}
+
+.bg-negro {
+    background: #000000;
+}
+
+.lista-menu li {
+    background: #000000;
+    color: #ffffff;
+    margin-bottom: 3px;
+    font-size: 1.8rem;
+}
+
+.text-video {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.size-text {
+    font-size: 2rem;
+}
+
+.titulo-periodico {
+    font-size: 3rem;
+}
+
+.titulo-periodico span {
+    font-size: 4.5rem;
+}
+
+.boton-periodico {
+    width: 40%;
+}
+
+.form-suscripcion input:focus {
+    box-shadow: none;
+}
+
+.footer-pagina h5 {
+    color: #ffffff;
+}
