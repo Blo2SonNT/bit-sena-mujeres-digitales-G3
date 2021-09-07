@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><b>Taller Grupal 1</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Calculadora</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="notas.html">Notas y Recordatorios</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="card text-center">
+            <div class="card-header">
+                CALCULADORA
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <input type="text" id="operacion_m">
+                    </div>
+                    <div class="col-4" onclick="operacion(1)">
+                        <h1>1</h1>
+                    </div>
+                    <div class="col-4" onclick="operacion(2)">
+                        <h1>2</h1>
+                    </div>
+                    <div class="col-4" onclick="operacion(3)">
+                        <h1>3</h1>
+                    </div>
+                    <div class="col-4" onclick="operacion(4)">
+                        <h1>4</h1>
+                    </div>
+                    <div class="col-4" onclick="operacion(5)">
+                        <h1>5</h1>
+                    </div>
+                    <div class="col-4" onclick="operacion(6)">
+                        <h1>6</h1>
+                    </div>
+                    <div class="col-4" onclick="operacion(7)">
+                        <h1>7</h1>
+                    </div>
+                    <div class="col-4" onclick="operacion(8)">
+                        <h1>8</h1>
+                    </div>
+                    <div class="col-4" onclick="operacion(9)">
+                        <h1>9</h1>
+                    </div>
+                    <div class="col-4" onclick="operacion(0)">
+                        <h1>0</h1>
+                    </div>
+                </div>
+                <div class="row px-5">
+                    <div class="col-3" onclick="operacion('+')">
+                        <h1>+</h1>
+                    </div>
+                    <div class="col-3" onclick="operacion('-')">
+                        <h1>-</h1>
+                    </div>
+                    <div class="col-3" onclick="operacion('*')">
+                        <h1>X</h1>
+                    </div>
+                    <div class="col-3" onclick="operacion('/')">
+                        <h1>/</h1>
+                    </div>
+                    <div class="col-3" onclick="operacion('=')">
+                        <h1>=</h1>
+                    </div>
+                    <div class="col-3" onclick="operacion('C')">
+                        <h1>C</h1>
+                    </div>
+                    <div class="col-12">
+                        Resultado: <span id="resultado_calculo"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
