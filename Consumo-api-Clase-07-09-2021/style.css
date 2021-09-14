@@ -3,3 +3,17 @@
         width: 70%;
     }
 }
+
+.estdo-vivo {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #09ff00;
+}
+
+.estado-muerto {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #ff0000;
+}
