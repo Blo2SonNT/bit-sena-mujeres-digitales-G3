@@ -1,26 +1,20 @@
-/*
-
-<div class="col">
-    <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-    </div>
-</div>
-
-*/
-
-
-function consumo_api(pagina = 1) {
-    var url_pagina = (pagina != 1) ? pagina.slice(47) : pagina
-    let url_api = "https://rickandmortyapi.com/api/character?page=" + url_pagina
+consumo_api = (pagina = 1, busqueda = false) => {
+    var url_pagina = (pagina != 1 && pagina != '') ? pagina.slice(47) : pagina
+    let url_api = ''
+    if (busqueda == true) {
+        let input_busqueda = document.getElementById("input_busqueda_api").value
+        url_api = "https://rickandmortyapi.com/api/character?name=" + input_busqueda
+    } else {
+        url_api = "https://rickandmortyapi.com/api/character?page=" + url_pagina
+    }
     console.log(url_api)
     let info_api = fetch(url_api)
     var contenedor_grilla = document.getElementById("api_data")
     contenedor_grilla.innerHTML = ''
     var div_paginacion = document.getElementById("paginacion")
+
+    let condicion_boton_next = ''
+    let condicion_boton_prev = ''
 
     // console.log(info_api)
 
@@ -53,9 +47,17 @@ function consumo_api(pagina = 1) {
                 `
             }
 
+            if (data_api.info.prev == null) {
+                condicion_boton_prev = "disabled"
+            }
+
+            if (data_api.info.next == null) {
+                condicion_boton_next = "disabled"
+            }
+
             div_paginacion.innerHTML = `
-                <button type="button" class="btn btn-dark" onclick="consumo_api('${data_api.info.prev}')">Anterior</button>
-                <button type="button" class="btn btn-dark" onclick="consumo_api('${data_api.info.next}')">Siguiente</button>
+                <button type="button" class="btn btn-dark" ${condicion_boton_prev} onclick="consumo_api('${data_api.info.prev}')">Anterior</button>
+                <button type="button" class="btn btn-dark" ${condicion_boton_next} onclick="consumo_api('${data_api.info.next}')">Siguiente</button>
             `
 
 
