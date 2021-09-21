@@ -28,10 +28,12 @@ function consumo_api() {
                 var recorrido_pokemon_individual = fetch(data_individual.url)
                 recorrido_pokemon_individual.then(res2 => res2.json())
                     .then(data_pokemon_url => {
+                        var img_1 = data_pokemon_url.sprites.front_shiny
+                        console.log(img_1)
                         contendor_data_api.innerHTML += `
-                        <div class="col">
+                        <div class="col" >
                             <div class="card">
-                                <img src="${data_pokemon_url.sprites.front_default}" class="card-img-top" alt="...">
+                                <img onclick="cambio_img('${img_1}', ${data_pokemon_url.id})" src="${data_pokemon_url.sprites.front_default}" class="card-img-top" id="pokemon_${data_pokemon_url.id}">
                                 <div class="card-body">
                                     <h5 class="card-title">${data_pokemon_url.name}</h5>
                                 </div>
@@ -53,3 +55,12 @@ function consumo_api() {
 }
 
 consumo_api()
+
+function cambio_img(url_imgen_nueva, id_pokemon) {
+    if (url_imgen_nueva != null) {
+        let cambio_img_tag = document.getElementById("pokemon_" + id_pokemon)
+        cambio_img_tag.src = url_imgen_nueva
+    } else {
+        alert("El pokemon no tiene version shiny")
+    }
+}
