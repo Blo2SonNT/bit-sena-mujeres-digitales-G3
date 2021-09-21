@@ -29,11 +29,13 @@ function consumo_api() {
                 recorrido_pokemon_individual.then(res2 => res2.json())
                     .then(data_pokemon_url => {
                         var img_1 = data_pokemon_url.sprites.front_shiny
-                        console.log(img_1)
+                        var img_original = data_pokemon_url.sprites.front_default
                         contendor_data_api.innerHTML += `
                         <div class="col" >
                             <div class="card">
-                                <img onclick="cambio_img('${img_1}', ${data_pokemon_url.id})" src="${data_pokemon_url.sprites.front_default}" class="card-img-top" id="pokemon_${data_pokemon_url.id}">
+                            <div id="container-img-pokemon">
+                            <img onclick="cambio_img('${img_1}', ${data_pokemon_url.id}, '${img_original}')" src="${data_pokemon_url.sprites.front_default}" class="card-img-top" id="pokemon_${data_pokemon_url.id}">
+                            </div>
                                 <div class="card-body">
                                     <h5 class="card-title">${data_pokemon_url.name}</h5>
                                 </div>
@@ -56,10 +58,14 @@ function consumo_api() {
 
 consumo_api()
 
-function cambio_img(url_imgen_nueva, id_pokemon) {
+function cambio_img(url_imgen_nueva, id_pokemon, img_antigua_url) {
+    console.log("entro")
     if (url_imgen_nueva != null) {
         let cambio_img_tag = document.getElementById("pokemon_" + id_pokemon)
         cambio_img_tag.src = url_imgen_nueva
+        setTimeout(function() {
+            cambio_img_tag.src = img_antigua_url
+        }, 2000)
     } else {
         alert("El pokemon no tiene version shiny")
     }
