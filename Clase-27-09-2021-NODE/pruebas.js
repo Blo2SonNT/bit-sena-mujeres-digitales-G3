@@ -47,35 +47,94 @@ Funciones tipo flecha o ArrowFunction
 Callbacks
 */
 
-function mensaje(callback_op) {
-    console.log("Mensaje antes de la llamada del Callback")
-    callback_op()
-}
+// function mensaje(callback_op) {
+//     console.log("Mensaje antes de la llamada del Callback")
+//     callback_op()
+// }
 
-function saludo() {
-    console.log('Saludo despuies de la llamada del callback')
-}
+// function saludo() {
+//     console.log('Saludo despuies de la llamada del callback')
+// }
 
 //mensaje(saludo)
 
 
 /****************************************/
 
-function sumar(digito1, digito2, callback) {
-    let operacion = digito1 + digito2
-    callback(operacion)
+// function sumar(digito1, digito2, callback) {
+//     let operacion = digito1 + digito2
+//     callback(operacion)
+// }
+
+// function resultado(operacion) {
+//     console.log(operacion)
+// }
+
+// sumar(2, 2, resultado)
+
+
+// setTimeout(function() {
+//     console.log("Olvide el nombre del Jefe")
+// }, 3000)
+
+
+// setTimeout(() => console.log("funcion tipo flecha"), 4000)
+
+
+/*
+Promesas
+*/
+
+//Traduccion de SetTimeOut a promesa 
+// setTimeout(() => console.log("funcion tipo flecha"), 4000)
+
+// const mensaje = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         if (false)
+//             resolve('Esto se ejecuta despues de 4 segundos')
+//         else
+//             reject('Hubo un error')
+//     }, 4000)
+// })
+
+// mensaje
+//     .then(msj => {
+//         console.log(msj)
+//     })
+//     .catch(error => {
+//         console.log(error)
+//     })
+
+
+/*
+Async await
+*/
+
+
+function mensaje() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (true)
+                resolve('Esto se ejecuta despues de 4 segundos')
+            else
+                reject('Hubo un error')
+        }, 4000)
+    })
 }
 
-function resultado(operacion) {
-    console.log(operacion)
+async function llamadaAsincrona() {
+    console.log('Llamada...')
+    const resultado = await mensaje();
+    return resultado;
 }
 
-sumar(2, 2, resultado)
+function mensaje2() {
+    console.log("Hola como estas hoy?")
+}
 
 
-setTimeout(function() {
-    console.log("Olvide el nombre del Jefe")
-}, 3000)
+llamadaAsincrona()
+    .then(x => console.log(x))
+    .catch(error_gatito => console.log(error_gatito))
 
-
-setTimeout(() => console.log("funcion tipo flecha"), 4000)
+mensaje2()
