@@ -28,6 +28,11 @@ function consumo_api() {
                 var recorrido_pokemon_individual = fetch(data_individual.url)
                 recorrido_pokemon_individual.then(res2 => res2.json())
                     .then(data_pokemon_url => {
+
+                        for (const data_abilities of data_pokemon_url.abilities) {
+                            console.log(data_abilities.ability.name)
+                        }
+
                         var img_1 = data_pokemon_url.sprites.front_shiny
                         var img_original = data_pokemon_url.sprites.front_default
                         contendor_data_api.innerHTML += `
