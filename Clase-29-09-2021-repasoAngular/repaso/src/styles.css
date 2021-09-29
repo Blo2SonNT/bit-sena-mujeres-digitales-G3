@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+* {
+    font-family: 'Birthstone', cursive;
+} */
+
+
+/* :root {
+    --color-morado: #9d00f8;
+    --size-titulo: 3rem;
+}
+
+body {
+    background-color: var(--color-morado) !important;
+}
+
+h1 {
+    font-size: var(--size-titulo) !important;
+} */
+
+.bg-arcoiris {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(10, 188, 250, 1) 32%, rgba(4, 193, 73, 1) 82%);
+}
