@@ -1,0 +1,14 @@
+.fas {
+    font-size: 1.2rem;
+    margin: 0 15px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.fa-pen:hover {
+    color: #2659ff;
+}
+
+.fa-trash:hover {
+    color: #ec1d1d;
+}
