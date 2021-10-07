@@ -7,23 +7,34 @@
             <form class="mt-5" [formGroup]="productoForm" (ngSubmit)="agregarProducto()">
                 <div class="my-3">
                     <input formControlName="productoNombre" class="form-control form-control-lg" type="text" placeholder="Nombre">
-                    <span></span>
+                    <span *ngIf="productoForm.get('productoNombre')?.hasError('required') && productoForm.get('productoNombre')?.touched" class="text-danger fw-bold">
+                        El nombre del producto es obligatorio
+                    </span>
+                    <!-- <div *ngIf="productoForm.get('productoNombre')?.hasError('required') && productoForm.get('productoNombre')?.touched" class="alert alert-danger" role="alert">
+                        A simple danger alert—check it out!
+                    </div> -->
                 </div>
                 <div class="my-3">
                     <input formControlName="productoPasillo" class="form-control form-control-lg" type="text" placeholder="Pasillo">
-                    <span></span>
+                    <span *ngIf="productoForm.get('productoPasillo')?.hasError('required') && productoForm.get('productoPasillo')?.touched" class="text-danger fw-bold">
+                        La ubicacion del producto es obligatoria
+                    </span>
                 </div>
                 <div class="my-3">
                     <input formControlName="productoValor" class="form-control form-control-lg" type="text" placeholder="Precio">
-                    <span></span>
+                    <span *ngIf="productoForm.get('productoValor')?.hasError('required') && productoForm.get('productoValor')?.touched" class="text-danger fw-bold">
+                        EL precio del producto es obligatorio
+                    </span>
                 </div>
                 <div class="my-3">
                     <input formControlName="productoProveedor" class="form-control form-control-lg" type="text" placeholder="Proveedor">
-                    <span></span>
+                    <span *ngIf="productoForm.get('productoProveedor')?.hasError('required') && productoForm.get('productoProveedor')?.touched" class="text-danger fw-bold">
+                        El proveedor del producto es obligatorio
+                    </span>
                 </div>
-                <div class="col-6 offset-3 d-flex justify-content-between align-content-center">
+                <div class="col-12 d-flex justify-content-between align-content-center">
                     <button class="btn btn-danger" [routerLink]="['/']" routerLinkActive="router-link-active">Cancelar</button>
-                    <button type="submit" class="btn btn-success">Guardar producto</button>
+                    <button type="submit" class="btn btn-success" [disabled]="productoForm.invalid">Guardar producto</button>
                 </div>
             </form>
         </div>

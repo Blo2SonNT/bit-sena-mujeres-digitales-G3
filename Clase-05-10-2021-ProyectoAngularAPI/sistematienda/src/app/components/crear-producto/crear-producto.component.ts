@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
 	selector: 'app-crear-producto',
@@ -10,9 +12,9 @@ export class CrearProductoComponent implements OnInit {
 
 	productoForm: FormGroup;
 
-	constructor(private fb: FormBuilder) {
+	constructor(private fb: FormBuilder, private router: Router) {
 		this.productoForm = this.fb.group({
-			productoNombre : ['', [Validators.required]], //, Validators.email
+			productoNombre : ['', [Validators.required]], //, Validators.email, Validators.minLength(5)
 			productoPasillo : ['', Validators.required],
 			productoValor: ['', Validators.required],
 			productoProveedor: ['', Validators.required]
@@ -24,6 +26,11 @@ export class CrearProductoComponent implements OnInit {
 
 	agregarProducto(){
 		console.log(this.productoForm);
+		this.router.navigate(['/']);
+		Swal.fire({
+			icon: 'success',
+			title: 'Producto registrado!'
+		})
 	}
 
 }
