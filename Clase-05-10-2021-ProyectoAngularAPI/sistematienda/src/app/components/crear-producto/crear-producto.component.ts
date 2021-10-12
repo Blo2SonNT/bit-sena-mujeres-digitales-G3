@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { Producto } from 'src/app/models/producto';
 
 @Component({
 	selector: 'app-crear-producto',
@@ -26,6 +27,9 @@ export class CrearProductoComponent implements OnInit {
 
 	agregarProducto(){
 		console.log(this.productoForm);
+
+		console.log(this.productoForm.get('productoNombre')?.value);
+
 		this.router.navigate(['/']);
 		Swal.fire({
 			icon: 'success',
