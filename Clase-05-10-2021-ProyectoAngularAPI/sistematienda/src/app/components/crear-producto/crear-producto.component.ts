@@ -28,7 +28,16 @@ export class CrearProductoComponent implements OnInit {
 	agregarProducto(){
 		console.log(this.productoForm);
 
-		console.log(this.productoForm.get('productoNombre')?.value);
+		// console.log(this.productoForm.get('productoNombre')?.value);
+
+		const PRODUCTO: Producto = {
+			nombre: this.productoForm.get('productoNombre')?.value, 
+			ubicacion: this.productoForm.get('productoPasillo')?.value, 
+			precio: this.productoForm.get('productoValor')?.value, 
+			proveedor: this.productoForm.get('productoProveedor')?.value
+		}
+
+		console.log(PRODUCTO)
 
 		this.router.navigate(['/']);
 		Swal.fire({
