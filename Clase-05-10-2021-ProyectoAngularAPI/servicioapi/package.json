@@ -1,0 +1,19 @@
+{
+  "name": "apitienda",
+  "version": "1.0.0",
+  "description": "Esta es la API que sera consumida en el proyecto de frontend llamado sistematienda",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Miguel Nieto",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongose": "0.0.2-security"
+  }
+}
