@@ -11,7 +11,9 @@ conectarDB();
 //     res.send("hola")
 // })
 
-aplicacion.use('/api/agregarproducto', require('./routes/producto'));
+aplicacion.use(express.json());
+
+aplicacion.use('/api/producto', require('./routes/producto'));
 
 
 //localhost:4000 - 127.0.0.1:4000
