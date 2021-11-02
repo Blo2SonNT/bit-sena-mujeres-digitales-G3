@@ -15,7 +15,6 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">ID</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Ubicacion</th>
                         <th scope="col">Precio</th>
@@ -24,26 +23,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Coca Cola 3L</td>
-                        <td>Pasillo 2</td>
-                        <td>7000</td>
-                        <td>CocaCola Company</td>
+                    <tr *ngFor="let producto of listadoProductos">
+                        <td>{{ producto.nombre }}</td>
+                        <td>{{ producto.ubicacion }}</td>
+                        <td>{{ producto.precio }}</td>
+                        <td>{{ producto.proveedor }}</td>
                         <td>
                             <i class="fas fa-pen" [routerLink]="['/editar-producto/1']" routerLinkActive="router-link-active"></i>
-                            <i class="fas fa-trash"></i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Ponque Ramo</td>
-                        <td>Pasillo 5</td>
-                        <td>4500</td>
-                        <td>Ramo</td>
-                        <td>
-                            <i class="fas fa-pen" [routerLink]="['/editar-producto/2']" routerLinkActive="router-link-active"></i>
-                            <i class="fas fa-trash"></i>
+                            <i class="fas fa-trash" (click)="eliminarProducto(producto._id)"></i>
                         </td>
                     </tr>
                 </tbody>

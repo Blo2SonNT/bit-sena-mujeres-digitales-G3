@@ -2,11 +2,12 @@
 
 const express = require('express'); //Llamada del servicio de express
 const conectarDB = require('./config/db');
+const cors = require('cors');
 
 const aplicacion = express(); //implementando el servicio en la aplicacion
 
 conectarDB();
-
+aplicacion.use(cors());
 // aplicacion.get('/', (req, res) => {
 //     res.send("hola")
 // })

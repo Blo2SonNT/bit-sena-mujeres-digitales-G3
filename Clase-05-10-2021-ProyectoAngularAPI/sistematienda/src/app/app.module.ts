@@ -10,6 +10,8 @@ import { Pagina404Component } from './components/pagina404/pagina404.component';
 import { CrearUsuarioComponent } from './components/crear-usuario/crear-usuario.component';
 import { ListaUsuarioComponent } from './components/lista-usuario/lista-usuario.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { ListaUsuarioComponent } from './components/lista-usuario/lista-usuario.
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
