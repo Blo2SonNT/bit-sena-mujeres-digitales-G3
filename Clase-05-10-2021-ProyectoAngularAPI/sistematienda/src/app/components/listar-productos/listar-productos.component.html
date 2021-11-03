@@ -29,7 +29,7 @@
                         <td>{{ producto.precio }}</td>
                         <td>{{ producto.proveedor }}</td>
                         <td>
-                            <i class="fas fa-pen" [routerLink]="['/editar-producto/1']" routerLinkActive="router-link-active"></i>
+                            <i class="fas fa-pen" [routerLink]="['/editar-producto', producto._id]" routerLinkActive="router-link-active"></i>
                             <i class="fas fa-trash" (click)="eliminarProducto(producto._id)"></i>
                         </td>
                     </tr>
